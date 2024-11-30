@@ -3,6 +3,8 @@
 icon: fas fa-info-circle
 order: 4
 ---
+Open source enthusiast, technical worker, guitar mangler, car driver, highly distractible, mainly intractable.
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+If you’re looking for my work persona, you’re in the wrong place.
+
+All words here are mine and reflect upon no other person or entity.
