@@ -2,7 +2,7 @@
 title: Reworking backups on the new PC
 date: 2024-11-30 13:41 -0500
 categories:
-  - computers
+  - linux
 tags:
   - setup
 toc: true
@@ -53,6 +53,7 @@ ExecStart=/usr/bin/rclone --stats 30s --stats-one-line --stats-log-level NOTICE 
 {: file="~/.config/systemd/user/rclone.service" }
 
 I also added the USB drives to the `fstab` to make sure they're always available, and not just when I'm logged into a Gnome session. These are still owned by me and show up in Nautilus.
+
 
 ```shell
 UUID=4AF28D65F28D55DB /media/Vault ntfs nosuid,nodev,nofail,X-fstrim.notrim,x-gvfs-show,uid=1000,gid=1000 0 0
