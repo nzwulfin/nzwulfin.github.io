@@ -73,8 +73,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -165,9 +164,9 @@
   },
   "active": "ae491e4dc584c232",
   "lastOpenFiles": [
-    "2024-11-30-Second post.md",
-    "2024-11-30-cockpit-cgroups.md",
     "2024-11-30-Test Post.md",
+    "2024-11-30-cockpit-cgroups.md",
+    "2024-11-30-Second post.md",
     "templates/Front_Matter.md",
     "{{date}}-Test post.md",
     "templates/Front_Matter.md~"
