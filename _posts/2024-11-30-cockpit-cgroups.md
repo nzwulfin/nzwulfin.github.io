@@ -14,7 +14,7 @@ Cockpit is a great interface for Linux that keeps getting better. The storage an
 On a server, services all typically run under their own users. Most things on your desktop run as one user: the one you log in as. In 99.99% cases, you'll never really need to think about that, unless you're trying to do some system level process isolation on your PC. Since most things run as you, when you're running low on resources like memory, "you" are likely the cause. And with all the tools to look at processes in Linux, each one shows you something slightly different.  
 
 You should be familiar with the differences between say `top` and `free` memory displays, although recent versions of `top` show the free / cache correctly. (or maybe I'm just dating myself) The Overview tab in Cockpit gets it's info from another source: cgroups. In particular, the cpu and memory interface files for each cgroup on the host. So get the "systemd view" of the services and users, not necessarily a process based view. Most of what you are doing, and probably what you're looking for to find that rogue process, is hidden inside `user@1000`: the `systemd` user slice for your user.
-![Overview metrics in Cockpit](/assets/imgs/overview.png){: .left}
+![Overview metrics in Cockpit](/assets/imgs/overview.png)
 _Two cards of the Cockpit metrics and history page, showing CPU and Memory utilization_
 
 ## A little slicing and dicing
