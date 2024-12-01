@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-11-30-cockpit-cgroups.md",
+                "file": "sources-text-and-typography.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-11-30-cockpit-cgroups"
+              "title": "sources-text-and-typography"
             }
           }
         ]
@@ -164,11 +164,13 @@
   },
   "active": "ae491e4dc584c232",
   "lastOpenFiles": [
-    "2024-11-30-Test Post.md",
+    "sources-write-a-new-post.md",
+    "sources-text-and-typography.md",
     "2024-11-30-cockpit-cgroups.md",
+    "templates/Front_Matter.md~",
+    "2024-11-30-Test Post.md",
     "2024-11-30-Second post.md",
     "templates/Front_Matter.md",
-    "{{date}}-Test post.md",
-    "templates/Front_Matter.md~"
+    "{{date}}-Test post.md"
   ]
 }
