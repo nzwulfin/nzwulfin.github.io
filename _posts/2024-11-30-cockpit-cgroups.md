@@ -14,8 +14,9 @@ Cockpit is a great interface for Linux that keeps getting better. The storage an
 On a server, services all typically run under their own users. Most things on your desktop run as one user: the one you log in as. In 99.99% cases, you'll never really need to think about that, unless you're trying to do some system level process isolation on your PC. Since most things run as you, when you're running low on resources like memory, "you" are likely the cause. And with all the tools to look at processes in Linux, each one shows you something slightly different.  
 
 You should be familiar with the differences between say `top` and `free` memory displays, although recent versions of `top` show the free / cache correctly. (or maybe I'm just dating myself) The Overview tab in Cockpit gets it's info from another source: cgroups. In particular, the cpu and memory interface files for each cgroup on the host. So get the "systemd view" of the services and users, not necessarily a process based view. Most of what you are doing, and probably what you're looking for to find that rogue process, is hidden inside `user@1000`: the `systemd` user slice for your user.
-![Overview metrics in Cockpit](/assets/imgs/overview.png)
+![Overview metrics in Cockpit](/assets/imgs/overview.png){: .left}
 _Two cards of the Cockpit metrics and history page, showing CPU and Memory utilization_
+
 ## A little slicing and dicing
 With an overly broad brush, `systemd` uses `cgroups` to manage resources in two broad swaths: the `system.slice `and the `user.slice`. There's more to it, and I'm not going in depth here, but think of it this way: any system level service controlled by `systemd` gets a `cgroup` under the `system.slice` and user controlled services go in the `user.slice`. Each logged in user also gets their very own slice of resources from the `user.slice`. If you ever used `systemctl status` and `systemctl --user status`, you've interacted with these different slices. There are other slices, and more hierarchy, but for this case, this is all we need to see what's a level down from the Cockpit metrics.
 
@@ -41,6 +42,7 @@ user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome-org.mozilla.fir
 user.slice/user-1000.slice/user@1000.service/session.slice                                                               280    1.7     1.2G        -        -
 user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service                                60    1.7       1G        -        -
 ```
+{: file="systemd-cgtop output" }
 
 There's still more hierarchy here under the `user@1000.slice`. A `systemd` service is managing two more slices: `app.slice` and `session.slice`, and there's something called a `scope`. All of this is internals for systemd that you've probably never really needed to look at, but right at the top there's a few useful things. 
 
@@ -64,5 +66,6 @@ user.slice/user-1000.slice/user@1000.service/app.slice/run-r25f0f897ba1c452087d2
 user.slice/user-1000.slice/user@1000.service/app.slice/podman.service                                                     21    0.1    61.2M        -        -
 user.slice/user-1000.slice/user@1000.service/app.slice/jellyfin.service                                                   22    0.0   731.5M        -        -
 ```
+{: file="systemd-cgtop output" }
 
 If you've ever been hunting for a process that's chewing up resources, and you can't quite find it, you now have a few more tools in your toolbox.
