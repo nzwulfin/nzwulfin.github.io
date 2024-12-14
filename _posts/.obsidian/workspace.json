@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2024-12-01-inspiration-strikes.md",
+                "file": "2024-12-13-laptop-power-profiles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-12-01-inspiration-strikes"
+              "title": "2024-12-13-laptop-power-profiles"
             }
           },
           {
@@ -110,6 +110,64 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "935e7e66b5862fe1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "power profile on battery notes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for power profile on battery notes"
+            }
+          },
+          {
+            "id": "965e2037b78fd037",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "power profile on battery notes.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from power profile on battery notes"
+            }
+          },
+          {
+            "id": "356b0757cf3450b4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "155f814017bbc434",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "power profile on battery notes.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of power profile on battery notes"
+            }
           }
         ]
       }
@@ -130,9 +188,11 @@
   },
   "active": "ae491e4dc584c232",
   "lastOpenFiles": [
-    "2024-12-01.md",
-    "2024-12-01-inspiration-strikes.md",
+    "2024-12-13-laptop-power-profiles.md",
     "sources-write-a-new-post.md",
+    "power profile on battery notes.md",
+    "2024-12-01-inspiration-strikes.md",
+    "2024-12-01.md",
     "sources-text-and-typography.md",
     "2024-11-30-cockpit-cgroups.md",
     "templates/Front_Matter.md~",
